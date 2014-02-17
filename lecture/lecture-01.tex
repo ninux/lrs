@@ -9,7 +9,15 @@
 		geschlossenem Wirkungskreis)
 \end{enumerate}
 
-\subsection{Zuordnung von Grössen}
+\subsection{Grössen des Standardregelkreises}
+\begin{itemize}
+	\item Führungsgrösse ($w$)
+	\item Regelfehler (auch \emph{Regeldifferenz}) ($e$)
+	\item Stellgrösse ($x$)
+	\item Regelgrösse ($y$)
+\end{itemize}
+
+\subsubsection{Übung -- Zuordnung von Grössen}
 \begin{table}[h!]
 	\begin{tabular}{l|l l l l}
 		Problem 
@@ -31,5 +39,76 @@
 			& Druckablass
 			& Temperatur \\
 		&&&& \\
+		Stausee
+			& Wasserniveau
+			& Ventile
+			& Zu- \& Abfluss
+			& Wasserniveau \\
+		&&&& \\
+	\end{tabular}
+\end{table}
+
+\subsection{Limitierung von Betrachtungen}
+Modelle können mathematisch (absolut stetig?) als auch zeitdiskret
+betrachtet werden. Diese beiden Betrachtungen führen zu sehr 
+unterschiedlichen Ergebnissen! 
+
+\subsection{Systeme}
+
+\begin{table}[h!]
+	\begin{tabular}{c l l}
+		Nr. & Beispiel & Klassifikation \\
+		\hline
+		&& \\ 1 
+			& $y(t) = \cos(t) \cdot x(t) $
+			& statisch \\
+		&& \\ 2	
+			& $y'(t) = -\cos(y(t)) + x(t) $
+			& dynamisch \\ && \\ \hline
+		&& \\ 3	
+			& $y'(t) = -y(t) + x(t), 
+				\quad t \in \mathbb{R}$
+			& zeitkontinuerlich\\
+		&& \\4
+			& $y((k+1) \tau) = -y(k\tau)+x(k\tau), 
+				\quad k \in \mathbb{Z}$
+			& Zeitdiskret\\ && \\ \hline
+		&& \\ 5	
+			& $y(t) =\cos(x(t-\tau)), 
+				\quad \tau > 0$
+			& kausal \\
+		&& \\ 6 	
+			& $y(t) = cos(c(t+\tau)),
+				\quad \tau > 0$
+			& nicht kausal \\ && \\ \hline
+		&& \\ 7 	
+			& $y'(t) = -3y(t) +x(t)$
+			& zeitvariant \\
+		&& \\ 8 	
+			& $y'(t) = -cos(t)\cdot y(t) + x(t)$
+			& zeitinvariant \\ && \\ \hline
+		&& \\ 9 
+			& $y'(t) = -y(t) + x(t)$
+			& linear \\
+		&& \\ 10 
+			& $y'(t) = -y^2(t) + x(t)$
+			& nichlinear \\ && \\ \hline
+		&& \\ 11 	
+			& $y'(t) = -y(t) + x(t)$
+			& endlich dimensional  \\ 
+		&& \\ 12
+			& $\frac{\delta y(t)}{\delta t} 
+				= \frac{\delta}{\delta x}y(x,t)+x(t)$
+			& unendlich dimensional \\ && \\ \hline
+		&& \\ 13
+			& $y(t) = 7\cos^2(t) \cdot x(t)$
+			& single input, single output\\
+		&& \\ 14
+			& $\begin{pmatrix} y_1(t) \\ y_2(t) \end{pmatrix}
+				= \begin{pmatrix} x_1 \dots \\
+					\dots x_n \end{pmatrix}
+				\cdot
+				\begin{pmatrix} k_1 \\ k_n \end{pmatrix}$
+			& multiple input, multiple output\\
 	\end{tabular}
 \end{table}
