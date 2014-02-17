@@ -1,0 +1,9 @@
+*.pdf
+*.aux
+*.toc
+*.log
+*.gls
+*.glg
+*.glo
+*.out
+
