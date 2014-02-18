@@ -1,3 +1,7 @@
+# ignore course sheets
+hslu
+
+# ignore tex dumps
 *.pdf
 *.aux
 *.toc
